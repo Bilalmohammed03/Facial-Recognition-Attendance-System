@@ -1,1 +1,6 @@
 # Facial-Recognition-Attendance-System
+We as a team made a Facial recognition attendance system, in order to create a real-time facial recognition system, we used a very powerful programming language Python, it is a flexible programming language renowned for its readability and broad library support. After registering and giving the relevant information, we stored student's photos which were captured and saved in a database. The photos in the database will be compared with the faces captured through the webcam. If a match is discovered, the student's attendance will be noted. The working of this project is as follows:
+1. First we encoded a picture using HOG algorithm to create a simplified version of the image. Using this simplified image, the algorithm will be able to find the part of the image that most looks like a generic HOG encoding of a face.
+2. Then we figured out the pose of the face by finding the main landmarks in the face. Once we find those landmarks, we use them to warp the image so that the eyes and mouth are centered.
+3. Then the centered face image is passed through a neural network that knows how to measure features of the face, and it saves 128 different measurements.
+4. Looking at all the faces we’ve measured in the past, see which person has the closest measurements to our face’s measurements. That’s our match!
